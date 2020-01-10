@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="panel" prefHeight="385.0" prefWidth="614.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.tiendaFXMLDocumentController">
+   <children>
+      <TableView fx:id="tabla" layoutX="57.0" layoutY="53.0" prefHeight="198.0" prefWidth="227.0">
+        <columns>
+          <TableColumn id="cl1" fx:id="columna1" prefWidth="75.0" resizable="false" text="Columna1" />
+          <TableColumn id="cl2" fx:id="columna2" prefWidth="75.0" resizable="false" text="Columna2" />
+          <TableColumn id="cl3" fx:id="columna3" prefWidth="76.0" resizable="false" text="Columna3" />
+        </columns>
+         <effect>
+            <Reflection bottomOpacity="0.53" fraction="0.14" topOpacity="0.42">
+               <input>
+                  <ColorAdjust brightness="-0.05" contrast="0.05" hue="-0.98" saturation="0.52" />
+               </input>
+            </Reflection>
+         </effect>
+      </TableView>
+      <Button fx:id="btnBorrar" layoutX="385.0" layoutY="61.0" mnemonicParsing="false" onAction="#borrarFila" text="Borrar" />
+      <Button fx:id="btnAñadir" layoutX="385.0" layoutY="105.0" mnemonicParsing="false" onAction="#añadirFila" text="Añadir" />
+      <Button fx:id="btnRemplazar" layoutX="385.0" layoutY="152.0" mnemonicParsing="false" onAction="#remplazarDatosFila" text="Remplazar" />
+      <TextField fx:id="txtNombre" layoutX="57.0" layoutY="309.0" prefHeight="25.0" prefWidth="72.0" />
+      <TextField fx:id="txtApellido" layoutX="129.0" layoutY="309.0" prefHeight="25.0" prefWidth="72.0" />
+      <TextField fx:id="txtEdad" layoutX="201.0" layoutY="309.0" prefHeight="25.0" prefWidth="72.0" />
+      <Label layoutX="57.0" layoutY="284.0" prefHeight="17.0" prefWidth="72.0" text="Nombre" />
+      <Label layoutX="129.0" layoutY="284.0" prefHeight="17.0" prefWidth="72.0" text="Apellido" />
+      <Label fx:id="lblEdad" layoutX="201.0" layoutY="284.0" prefHeight="17.0" prefWidth="72.0" text="Edad" />
+      <Button fx:id="btnImprimir" layoutX="385.0" layoutY="193.0" mnemonicParsing="false" onAction="#imprimir" text="Imprimir" />
+      <Button fx:id="btnAceptar" layoutX="283.0" layoutY="309.0" mnemonicParsing="false" onAction="#aceptar" text="Aceptar" />
+      <TextField fx:id="txtBuscar" layoutX="57.0" layoutY="14.0" prefHeight="25.0" prefWidth="227.0" promptText="palabras claves a buscar" />
+      <Button fx:id="btnBuscar" layoutX="283.0" layoutY="14.0" mnemonicParsing="false" onAction="#buscar" text="Buscar" />
+   </children>
+</AnchorPane>
